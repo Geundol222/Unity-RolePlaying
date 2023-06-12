@@ -800,8 +800,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9384ab8608cdc3d479fe89cd51eed48f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_BindingMode: 5
-  m_FollowOffset: {x: 0, y: 3, z: -2}
+  m_BindingMode: 4
+  m_FollowOffset: {x: 0, y: 1.5, z: -2}
   m_XDamping: 1
   m_YDamping: 1
   m_ZDamping: 1
@@ -3504,7 +3504,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 113285648}
-  m_LocalRotation: {x: -0.17567489, y: 0.8078092, z: -0.29693207, w: -0.4779268}
+  m_LocalRotation: {x: 0.049813688, y: -1e-45, z: -0, w: 0.99875855}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -4489,8 +4489,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9384ab8608cdc3d479fe89cd51eed48f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_BindingMode: 5
-  m_FollowOffset: {x: 0, y: 3, z: -2}
+  m_BindingMode: 4
+  m_FollowOffset: {x: 0, y: 1.5, z: -2}
   m_XDamping: 1
   m_YDamping: 1
   m_ZDamping: 1
@@ -25399,8 +25399,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 965473620}
-  m_LocalRotation: {x: -0.17567487, y: 0.8078092, z: -0.29693207, w: -0.4779268}
-  m_LocalPosition: {x: -26.87674, y: 3, z: -14.763367}
+  m_LocalRotation: {x: 0.020997254, y: -0.0000000021503235, z: 4.5160844e-11, w: 0.9997795}
+  m_LocalPosition: {x: -28.629688, y: 1.5, z: -17.726265}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -25652,7 +25652,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 976720001}
-  m_LocalRotation: {x: -0.14792846, y: 0.8235334, z: -0.250034, w: -0.48722985}
+  m_LocalRotation: {x: -0.007646074, y: -0.000000017251288, z: -1.3190848e-10, w: 0.9999708}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -29163,7 +29163,7 @@ MonoBehaviour:
         m_Calls: []
   m_LegacyBlendHint: 0
   m_YAxis:
-    Value: 1
+    Value: 0.5
     m_SpeedMode: 0
     m_MaxSpeed: 2
     m_AccelTime: 0.2
@@ -29214,7 +29214,7 @@ MonoBehaviour:
     m_RecenteringTime: 2
     m_LegacyHeadingDefinition: -1
     m_LegacyVelocityFilterStrength: -1
-  m_BindingMode: 5
+  m_BindingMode: 4
   m_SplineCurvature: 0.2
   m_Orbits:
   - m_Height: 3
@@ -29236,7 +29236,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1118487252}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -26.87674, y: 3, z: -14.763367}
+  m_LocalPosition: {x: -28.629688, y: 1.5, z: -17.726265}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -45253,8 +45253,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9384ab8608cdc3d479fe89cd51eed48f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_BindingMode: 5
-  m_FollowOffset: {x: 0, y: 3, z: -2}
+  m_BindingMode: 4
+  m_FollowOffset: {x: 0, y: 1.5, z: -2}
   m_XDamping: 1
   m_YDamping: 1
   m_ZDamping: 1
@@ -50202,7 +50202,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2024967083}
-  m_LocalRotation: {x: -0.16182251, y: 0.8160344, z: -0.27351832, w: -0.4827931}
+  m_LocalRotation: {x: 0.02099726, y: -0.0000000010751617, z: 2.2580425e-11, w: 0.9997796}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -53588,6 +53588,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 985681757189513620, guid: 5faa371bc854732499e6d4d14c7901cd, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 124ef53ee2d29154ab3671ab2e9bfff8, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5faa371bc854732499e6d4d14c7901cd, type: 3}
 --- !u!1 &5299587158907077135 stripped
@@ -53660,5 +53664,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78583c15d8aa2c04d9a61a5a4310f4a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 3
+  runSpeed: 4
+  walkSpeed: 1
   jumpSpeed: 5

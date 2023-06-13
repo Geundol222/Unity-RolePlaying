@@ -5,9 +5,13 @@ using UnityEngine.InputSystem;
 
 public class PlayerMover : MonoBehaviour
 {
-    [SerializeField] float runSpeed;
+    [SerializeField] bool debug;
+
     [SerializeField] float walkSpeed;
+    [SerializeField] float runSpeed;
     [SerializeField] float jumpSpeed;
+    [SerializeField] float walkStepRange;
+    [SerializeField] float runStepRange;
 
     private Animator anim;
     private CharacterController controller;
@@ -39,6 +43,8 @@ public class PlayerMover : MonoBehaviour
         }
     }
 
+    float lastStepTime = 0.5f;
+
     private void Move()
     {
         if (moveDir.magnitude == 0)
@@ -47,6 +53,10 @@ public class PlayerMover : MonoBehaviour
             anim.SetFloat("MoveSpeed", curSpeed);
             return;
         }
+
+        Vector3 forwardVector = new Vector3(Camera.main.transform.forward.x, 0, Camera.main.transform.forward.z).normalized;
+        Vector3 rightVector = new Vector3(Camera.main.transform.right.x, 0, Camera.main.transform.right.z).normalized;
+
 
         if (isWalk)
         {
@@ -59,14 +69,29 @@ public class PlayerMover : MonoBehaviour
             anim.SetFloat("MoveSpeed", curSpeed);
         }
 
-        Vector3 forwardVector = new Vector3(Camera.main.transform.forward.x, 0, Camera.main.transform.forward.z).normalized;
-        Vector3 rightVector = new Vector3(Camera.main.transform.right.x, 0, Camera.main.transform.right.z).normalized;
-
+        
         controller.Move(forwardVector * moveDir.z * curSpeed * Time.deltaTime);
         controller.Move(rightVector * moveDir.x * curSpeed * Time.deltaTime);
 
         Quaternion lookRotation = Quaternion.LookRotation(forwardVector * moveDir.z + rightVector * moveDir.x);
         transform.rotation = Quaternion.Lerp(transform.rotation, lookRotation, 0.05f);
+
+        lastStepTime -= Time.deltaTime;
+        if (lastStepTime < 0)
+        {
+            lastStepTime = 0.5f;
+            GenerateFootStepSound();
+        }
+    }
+
+    private void GenerateFootStepSound()
+    {
+        Collider[] colliders = Physics.OverlapSphere(transform.position, isWalk ? walkStepRange : runStepRange);
+        foreach(Collider collider in colliders)
+        {
+            IListenable listenable = collider.GetComponent<IListenable>();
+            listenable?.Listen(transform);
+        }
     }
 
     private void OnMove(InputValue value)
@@ -115,5 +140,15 @@ public class PlayerMover : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.None;
         StopCoroutine(MoveRoutine());
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        if (!debug)
+            return;
+
+        Gizmos.color = Color.cyan;
+        Gizmos.DrawWireSphere(transform.position, walkStepRange);
+        Gizmos.DrawWireSphere(transform.position, runStepRange);
     }
 }

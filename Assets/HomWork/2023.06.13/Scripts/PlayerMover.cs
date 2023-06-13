@@ -4,7 +4,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace HomeWork0613
+namespace HomeWork0612
 {
     public class PlayerMover : MonoBehaviour
     {

@@ -5,6 +5,8 @@ using UnityEngine.InputSystem;
 
 public class PlayerAttacker : MonoBehaviour
 {
+    [SerializeField] bool debug;
+
     [SerializeField] int damage;
     [SerializeField] float range;
     [SerializeField, Range(0, 360)] float attackAngle;
@@ -46,6 +48,9 @@ public class PlayerAttacker : MonoBehaviour
 
     private void OnDrawGizmosSelected()
     {
+        if (!debug)
+            return;
+
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, range);
 

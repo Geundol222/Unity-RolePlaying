@@ -14,6 +14,7 @@ public class PlayerMover : MonoBehaviour
     private Vector3 moveDir;
     private float curSpeed;
     private float ySpeed;
+    private bool isGrounded;
     private bool isWalk;
 
     private void Awake()
@@ -24,6 +25,7 @@ public class PlayerMover : MonoBehaviour
 
     private void OnEnable()
     {
+        Cursor.lockState = CursorLockMode.Locked;
         StartCoroutine(MoveRoutine());
     }
 
@@ -82,8 +84,11 @@ public class PlayerMover : MonoBehaviour
     {
         ySpeed += Physics.gravity.y * Time.deltaTime;
 
-        if (controller.isGrounded && ySpeed < 0)
+        if (isGrounded && ySpeed < 0)
+        {
             ySpeed = 0f;
+            anim.SetBool("IsGrounded", true);
+        }
 
         controller.Move(Vector3.up * ySpeed * Time.deltaTime);
     }
@@ -95,11 +100,20 @@ public class PlayerMover : MonoBehaviour
 
     private void OnJump(InputValue value)
     {
+        anim.SetBool("IsGrounded", false);
         Jump();
+    }
+
+    private void GroundChecker()
+    {
+        RaycastHit hit;
+
+        isGrounded = Physics.SphereCast(transform.position + Vector3.up * 1f, 0.5f, Vector3.down, out hit, 0.6f);
     }
 
     private void OnDisable()
     {
+        Cursor.lockState = CursorLockMode.None;
         StopCoroutine(MoveRoutine());
     }
 }

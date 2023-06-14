@@ -2244,7 +2244,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debug: 1
   point: {fileID: 431193822}
-  range: 1.3
+  range: 1
 --- !u!1 &936604855948278892
 GameObject:
   m_ObjectHideFlags: 0

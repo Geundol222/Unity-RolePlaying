@@ -53,7 +53,7 @@ public class PlayerAttacker : MonoBehaviour
 
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, range);
-
+        
         Vector3 rightDir = AngleToDir(transform.eulerAngles.y + attackAngle * 0.5f);
         Vector3 leftDir = AngleToDir(transform.eulerAngles.y - attackAngle * 0.5f);
         Debug.DrawRay(transform.position, rightDir * range, Color.green);

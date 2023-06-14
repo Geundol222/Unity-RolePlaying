@@ -3561,7 +3561,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 113285648}
-  m_LocalRotation: {x: 0.049813736, y: 0.000000002148128, z: -1.0713927e-10, w: 0.99875855}
+  m_LocalRotation: {x: 0.049813733, y: -0.0000000021481275, z: 1.0713925e-10, w: 0.99875855}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -18256,7 +18256,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 930162822016906394, guid: 5faa371bc854732499e6d4d14c7901cd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -30.81
+      value: -30.86
       objectReference: {fileID: 0}
     - target: {fileID: 930162822016906394, guid: 5faa371bc854732499e6d4d14c7901cd, type: 3}
       propertyPath: m_LocalPosition.y
@@ -25841,7 +25841,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 965473620}
   m_LocalRotation: {x: 0.020997303, y: -0.0000000021503237, z: 4.5160948e-11, w: 0.9997795}
-  m_LocalPosition: {x: -30.81, y: 1.5, z: -17.05}
+  m_LocalPosition: {x: -30.86, y: 1.5, z: -17.05}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -26093,7 +26093,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 976720001}
-  m_LocalRotation: {x: -0.007646026, y: -0.00000001723353, z: -1.3177186e-10, w: 0.9999708}
+  m_LocalRotation: {x: -0.007646026, y: 0.00000001723353, z: 1.3177186e-10, w: 0.9999708}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -29677,7 +29677,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1118487252}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -30.81, y: 1.5, z: -17.05}
+  m_LocalPosition: {x: -30.86, y: 1.5, z: -17.05}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -45508,7 +45508,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1555897279}
   playerPosition: {fileID: 1191628396}
-  freeLookCamera: {fileID: 1118487253}
 --- !u!4 &1796628613
 Transform:
   m_ObjectHideFlags: 0
@@ -45517,7 +45516,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1796628611}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -40.41131, y: 0.5161531, z: -14.079943}
+  m_LocalPosition: {x: -40.41131, y: 0, z: -14.079943}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
